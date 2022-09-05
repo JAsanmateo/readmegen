@@ -1,20 +1,53 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+const generateMarkdown = data => {
+  return `# ${data.project_title}
+  ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
 
-`;
-}
+  ## Description
+  ${data.description}
+  
+  ## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [License](#license)
+* [Questions](#questions)
+
+## Installation
+${data.installation}
+
+## Usage 
+${data.usage}
+
+## Contributing
+*If you would like to contribute this project, you can follow these guidelines for how to do so.*
+<br />
+${data.contributing}
+
+## Questions?
+Questions about this project can be directed to:
+- Email: ${data.email}. 
+- You can view more of my projects at ${data.github_url}.
+
+## Tests
+${data.tests}
+
+## License
+![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
+<br />     
+Content in this project is covered by the ${data.license} license. 
+
+-----------
+
+README Generator - Copyright ${data.copyright_year} ${data.author}`;
+};
+
+
+// function generateMarkdown(data) {
+//   return `# ${data.title}
+
+// `;
+// }
 
 module.exports = generateMarkdown;

@@ -22,7 +22,7 @@ const questions = () => {
         {
           type: 'input',
           message: 'Please write the description for your project.',
-        //   name: //Template literal from Markdownfiles
+          name: 'description'
         },
         {
           type: 'input',
