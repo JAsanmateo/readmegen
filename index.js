@@ -2,11 +2,11 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generatePage = require("./utils/generateMarkdown.js")
+const generatePage = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
 const questions = () => {
-    inquirer.prompt([
+   return inquirer.prompt([
         {
           type: 'input',
           name: 'project_title',
@@ -16,7 +16,7 @@ const questions = () => {
           type: 'list',
           name: 'license',
           message: 'What kind of lisence does your project have?',
-          Choices: ["MIT", "GNU"],
+          choices: ["MIT", "GNU"],
           default: ["MIT"]
         },
         {
