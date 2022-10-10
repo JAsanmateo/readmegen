@@ -13,6 +13,16 @@ const questions = () => {
           message: 'What is the title of your project?',
         },
         {
+          type: 'input',
+          name: 'author',
+          message: 'Who is the author of this project?',
+        },
+        {
+          type: 'input',
+          name: 'copyright_year',
+          message: 'What is the copyright year of this project?',
+        },
+        {
           type: 'list',
           name: 'license',
           message: 'What kind of lisence does your project have?',
@@ -26,12 +36,12 @@ const questions = () => {
         },
         {
           type: 'input',
-          name: 'Installation',
+          name: 'installation',
           message: 'Please write installation instructions for your project',
         },
         {
           type: 'input',
-          name: 'github',
+          name: 'github_url',
           message: 'Enter your GitHub Username',
         },
         {
@@ -41,13 +51,18 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'credits',
+            name: 'contributing',
             message: 'Please write some credits for your project',
           },
         {
             type: 'input',
-            name: 'Questions?',
+            name: 'email',
             message: 'Provide an email address for questions to be directed too',
+          },
+          {
+            type: 'input',
+            name: 'tests',
+            message: 'What kind of testing was required for this project?',
           },
       ])
 };
@@ -65,6 +80,7 @@ const writeFile = data => {
 };
 
 // TODO: Create a function to initialize app
+
 questions()
 .then(answers => {
     return generatePage(answers);

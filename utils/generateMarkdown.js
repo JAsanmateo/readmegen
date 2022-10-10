@@ -28,7 +28,7 @@ ${data.contributing}
 ## Questions?
 Questions about this project can be directed to:
 - Email: ${data.email}. 
-- You can view more of my projects at ${data.github_url}.
+- You can view more of my projects at www.github.com/${data.github_url}.
 
 ## Tests
 ${data.tests}
